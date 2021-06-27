@@ -2,10 +2,35 @@
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
+const purgeCSS = {
+  module: require('@fullhuman/postcss-purgecss'),
+  options: {
+    content: ['./app/index.html', './app/**/*.hbs', './node_modules/**/*.hbs'],
+    defaultExtractor: (content) => {
+      return content.match(/[^\s"'<>`]*[^\s"':<>`]/g) || [];
+    },
+    safelist: ['dir', 'ltr', 'rtl'],
+  },
+};
+
 module.exports = function (defaults) {
-  let app = new EmberApp(defaults, {
-    // Add options here
-  });
+  const environment = process.env.EMBER_ENV;
+  const isProduction = ['production', 'staging'].includes(environment);
+
+  const options = {
+    postcssOptions: {
+      compile: {
+        plugins: [
+          require('postcss-import'),
+          require('tailwindcss'),
+          require('autoprefixer'),
+          ...(isProduction ? [purgeCSS] : []),
+        ],
+      },
+    },
+  };
+
+  let app = new EmberApp(defaults, options);
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
