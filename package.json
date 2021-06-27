@@ -12,6 +12,7 @@
   },
   "scripts": {
     "build": "ember build --environment=production",
+    "generate-ssl": "sh ./scripts/generate-ssl-certificate.sh",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel 'lint:!(fix)'",
     "lint:fix": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*:fix",
     "lint:hbs": "ember-template-lint .",
@@ -21,7 +22,9 @@
     "lint:prettier:fix": "prettier **/*.hbs --write --parser=glimmer",
     "lint:styles": "stylelint '**/*.{scss,css}'",
     "lint:styles:fix": "stylelint '**/*.{scss,css}' --fix",
-    "start": "ember serve",
+    "start": "ember serve NODE_EXTRA_CA_CERTS=$(mkcert -CAROOT)/rootCA.pem ",
+    "start:prod": "ember serve -prod NODE_EXTRA_CA_CERTS=$(mkcert -CAROOT)/rootCA.pem ",
+    "start:ssl-disabled": "ember serve --ssl=false",
     "test": "npm-run-all lint test:*",
     "test:ember": "ember test"
   },
