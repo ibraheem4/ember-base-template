@@ -18,6 +18,9 @@
     "lint:hbs:fix": "ember-template-lint . --fix",
     "lint:js": "eslint . --cache",
     "lint:js:fix": "eslint . --fix",
+    "lint:prettier:fix": "prettier **/*.hbs --write --parser=glimmer",
+    "lint:styles": "stylelint '**/*.{scss,css}'",
+    "lint:styles:fix": "stylelint '**/*.{scss,css}' --fix",
     "start": "ember serve",
     "test": "npm-run-all lint test:*",
     "test:ember": "ember test"
@@ -56,6 +59,8 @@
     "eslint-plugin-ember": "^10.3.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.3.1",
+    "husky": "6.0.0",
+    "lint-staged": "11.0.0",
     "loader.js": "^4.7.0",
     "npm-run-all": "^4.1.5",
     "postcss": "8.3.5",
@@ -63,6 +68,8 @@
     "prettier": "^2.2.1",
     "qunit": "^2.14.1",
     "qunit-dom": "^1.6.0",
+    "stylelint": "13.13.1",
+    "stylelint-config-prettier": "8.0.2",
     "stylelint-prettier": "1.2.0",
     "tailwindcss": "2.2.4",
     "tailwindcss-dir": "4.0.0"
