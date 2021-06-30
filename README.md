@@ -67,6 +67,10 @@ Upload `SERVER_CRT` and `SERVER_KEY` on GitHub
 
 > https://docs.github.com/en/actions/reference/encrypted-secrets
 
+### Using the Git commit template
+
+    git config commit.template .gitmessage
+
 ## Further Reading / Useful Links [](#further-reading-useful-links)
 
 - [ember.js](https://emberjs.com/)
