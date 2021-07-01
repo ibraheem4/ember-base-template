@@ -16,16 +16,13 @@ _NOTE:_ This app is designed to run on SSL, so the default commands (e.g. `yarn 
 
 ## Quickstart [](#quickstart)
 
-`yarn generate-ssl && yarn && yarn start`
+```
+yarn generate-ssl && \
+yarn && \
+yarn start
+```
 
 - Visit your Ember Web app at [https://localhost:4200](https://localhost:4200)
-
-## Installation [](#installation)
-
-- `git clone <repository-url>` this repository
-- `cd ember-base-template`
-- `yarn generate-ssl` (installs `mkcert` via `homebrew` then generates a public/private key pair at `ssl/`)
-- `yarn`
 
 ## Running / Development [](#running-developing)
 
