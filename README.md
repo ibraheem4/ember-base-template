@@ -2,15 +2,10 @@
 
 _NOTE:_ This app is designed to run on SSL, so the default commands (e.g. `yarn start`) will serve via HTTPS on localhost.
 
-# Quickstart [](#quickstart)
-
-`yarn generate-ssl && yarn && yarn start`
-
-- Visit your Ember Web app at [https://localhost:4200](https://localhost:4200)
-
 ## Prerequisites [](#prerequisites)
 
-You will need the following things properly installed on your computer.
+1. Buy an Apple computer.
+2. Install the following on your computer.
 
 - [Git](https://git-scm.com/)
 - [Node.js](https://nodejs.org/)
@@ -18,6 +13,12 @@ You will need the following things properly installed on your computer.
 - [Ember CLI](https://ember-cli.com/)
 - [Google Chrome](https://google.com/chrome/)
 - [Homebrew](https://brew.sh)
+
+## Quickstart [](#quickstart)
+
+`yarn generate-ssl && yarn && yarn start`
+
+- Visit your Ember Web app at [https://localhost:4200](https://localhost:4200)
 
 ## Installation [](#installation)
 
