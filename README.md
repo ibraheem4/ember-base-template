@@ -13,6 +13,8 @@ _NOTE:_ This app is designed to run on SSL, so the default commands (e.g. `yarn 
 - [Ember CLI](https://ember-cli.com/)
 - [Google Chrome](https://google.com/chrome/)
 - [Homebrew](https://brew.sh)
+- [Perl](https://www.perl.org)
+- [hub](https://github.com/github/hub)
 
 ## Quickstart [](#quickstart)
 
@@ -24,6 +26,44 @@ yarn start
 
 - Visit your Ember Web app at [https://localhost:4200](https://localhost:4200)
 
+## Spawning a new project [](#spawning-a-new-project)
+
+**Spawn a new project from this template.**
+
+For example, for a project named `ember-template-demo` in a directory called `ember-template-demo`, run these commands:
+
+1.  From your development directory (e.g. `$HOME/Projects`), create a new empty repo on Github (e.g `ember-template-demo`).
+```
+cd $HOME/Projects && \
+mygitg && \
+mkdir $HOME/Projects/ember-template-demo && \
+cd $HOME/Projects/ember-template-demo && \
+git init && \
+hub create && \
+hub browse
+```
+
+2. [Duplicate the repo](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/duplicating-a-repository#mirroring-a-repository) by `push --mirror` into the newly created directory.
+```
+rm -rf $HOME/Projects/ember-template-demo && \
+rm -rf $HOME/Projects/temp && \
+mkdir $HOME/Projects/temp && \
+cd $HOME/Projects/temp && \
+git clone --bare https://github.com/ibraheem4/ember-base-template.git && \
+cd $HOME/Projects/temp/ember-base-template.git && \
+git push --mirror https://github.com/ibraheem4/ember-template-demo.git && \
+cd $HOME/Projects && \
+git clone https://github.com/ibraheem4/ember-template-demo.git && \
+cd $HOME/Projects/ember-template-demo && \
+find . -not -iwholename '*.git*' -type f -print0 | xargs -0 perl -pi -w -e 's/ember-base-template/ember-template-demo/g;' \ && \
+git add --all && \
+git commit -m "Initial commit: spawned from ember-base-template" && \
+git push origin master && \
+rm -rf $HOME/Projects/temp && \
+hub browse
+```
+
+3. Run [quickstart](#quickstart-)
 ## Running / Development [](#running-developing)
 
 - `ember serve`
