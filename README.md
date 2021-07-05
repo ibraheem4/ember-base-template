@@ -101,7 +101,9 @@ Use `yarn` to check for updates to packages
 
 ### Continuous Integration [](#continous-integration)
 
-Upload `SERVER_CRT` and `SERVER_KEY` on GitHub
+Upload `SERVER_CRT` and `SERVER_KEY` on GitHub.
+
+**This step is required for GitHub Actions to work**
 
 > https://docs.github.com/en/actions/reference/encrypted-secrets
 
