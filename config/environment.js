@@ -17,6 +17,10 @@ module.exports = function (environment) {
       },
     },
 
+    'ember-cli-mirage': {
+      enabled: false,
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
@@ -42,6 +46,8 @@ module.exports = function (environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+
+    ENV['ember-cli-mirage'].enabled = process.env.USE_MIRAGE === 'true';
   }
 
   if (environment === 'test') {
@@ -54,6 +60,11 @@ module.exports = function (environment) {
 
     ENV.APP.rootElement = '#ember-testing';
     ENV.APP.autoboot = false;
+
+    ENV['ember-simple-auth-token'].refreshAccessTokens = false;
+    ENV['ember-simple-auth-token'].tokenExpirationInvalidateSession = false;
+
+    ENV['ember-cli-mirage'].enabled = true;
   }
 
   if (environment === 'production') {

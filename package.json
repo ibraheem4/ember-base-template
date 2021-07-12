@@ -25,6 +25,7 @@
     "start": "ember serve NODE_EXTRA_CA_CERTS=$(mkcert -CAROOT)/rootCA.pem ",
     "start:prod": "ember serve -prod NODE_EXTRA_CA_CERTS=$(mkcert -CAROOT)/rootCA.pem ",
     "start:ssl-disabled": "ember serve --ssl=false",
+    "start:use-mirage": "USE_MIRAGE=true ember serve NODE_EXTRA_CA_CERTS=$(mkcert -CAROOT)/rootCA.pem ",
     "test": "npm-run-all lint test:*",
     "test:ember": "ember test"
   },
@@ -44,6 +45,7 @@
     "ember-cli-dependency-checker": "^3.2.0",
     "ember-cli-htmlbars": "^5.7.1",
     "ember-cli-inject-live-reload": "^2.0.2",
+    "ember-cli-mirage": "2.2.0",
     "ember-cli-postcss": "7.0.2",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-terser": "^4.0.1",
@@ -64,6 +66,7 @@
     "eslint-plugin-ember": "^10.3.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.3.1",
+    "faker": "5.5.3",
     "husky": "6.0.0",
     "lint-staged": "11.0.0",
     "loader.js": "^4.7.0",
