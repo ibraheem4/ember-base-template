@@ -20,7 +20,20 @@ module.exports = function (environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      API_NAMESPACE: 'api',
+      API_HOST: 'https://localhost:8000',
     },
+  };
+
+  ENV['ember-simple-auth-token'] = {
+    serverTokenEndpoint:
+      `${ENV.APP.API_HOST}/${ENV.APP.API_NAMESPACE}/` + 'dj-rest-auth/login/',
+    serverTokenRefreshEndpoint:
+      `${ENV.APP.API_HOST}/${ENV.APP.API_NAMESPACE}/` +
+      'dj-rest-auth/token/refresh/',
+    tokenPropertyName: 'access_token',
+    refreshAccessTokens: true,
+    refreshLeeway: 300,
   };
 
   if (environment === 'development') {
