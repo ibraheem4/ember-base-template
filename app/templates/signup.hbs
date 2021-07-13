@@ -1,0 +1,71 @@
+{{page-title 'Signup'}}
+<form data-test-form='signup-form' {{on 'submit' this.signup}}>
+  <div class='mb-6 space-y-4'>
+    <div>
+      <label
+        for='email'
+        class='block mb-1 text-sm font-medium text-gray-700 dark:text-gray-200'
+      >
+        Email
+      </label>
+      <Input
+        required='true'
+        id='email'
+        placeholder='Enter login'
+        autocomplete='username'
+        @value={{this.email}}
+        data-test-input='email'
+        class='block w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none sm:text-sm dark:bg-black dark:text-gray-200'
+        @type='email'
+      />
+    </div>
+    <div>
+      <label
+        for='new-password'
+        class='block mb-1 text-sm font-medium text-gray-700 dark:text-gray-200'
+      >
+        Password
+      </label>
+      <Input
+        required='true'
+        id='new-password'
+        placeholder='Enter new password'
+        @type='password'
+        autocomplete='new-password'
+        @value={{this.password}}
+        data-test-input='password'
+        class='block w-full px-3 py-2 mb-1 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none sm:text-sm dark:bg-black dark:text-gray-200'
+      />
+      <label
+        for='password-confirmation'
+        class='block mt-2 mb-1 text-sm font-medium text-gray-700 dark:text-gray-200'
+      >
+        Password confirmation
+      </label>
+      <Input
+        required='true'
+        id='password-confirmation'
+        placeholder='Confirm password'
+        @type='password'
+        autocomplete='new-password'
+        @value={{this.passwordConfirmation}}
+        data-test-input='password-confirmation'
+        class='block w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none sm:text-sm dark:bg-black dark:text-gray-200'
+      />
+    </div>
+  </div>
+  <button
+    type='button'
+    data-test-action='signup'
+    class='flex justify-center w-full px-4 py-2 mb-1 text-sm font-medium text-gray-700 border border-gray-300 rounded-md shadow-sm hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-900 disabled:opacity-60'
+    {{on 'click' this.signup}}
+  >
+    Signup
+  </button>
+  {{#if this.errorMessage}}
+    <p>
+      {{this.errorMessage}}
+    </p>
+  {{/if}}
+</form>
+{{outlet}}

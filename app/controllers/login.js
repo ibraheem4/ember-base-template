@@ -18,6 +18,25 @@ export default class LoginController extends Controller {
       password: password,
     };
     const authenticator = 'authenticator:token';
+    await this.authenticateWithCredentials(authenticator, identification);
+    try {
+      await this.session.authenticate(authenticator, credentials);
+    } catch (error) {
+      this.errorMessage =
+        error.json.non_field_errors ||
+        error.json.password ||
+        error.json.email ||
+        error.error ||
+        error;
+    }
+
+    if (this.session.isAuthenticated) {
+      // What to do with all this success?
+      this.transitionToRoute('index');
+    }
+  }
+
+  async authenticateWithCredentials(authenticator, credentials) {
     try {
       await this.session.authenticate(authenticator, credentials);
     } catch (error) {
