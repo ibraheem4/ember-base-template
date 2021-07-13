@@ -1,5 +1,4 @@
 import AUTH from 'ember-base-template/mirage/constants/auth';
-import ENV from 'ember-base-template/config/environment';
 
 export default function () {
   // API configuration
@@ -13,9 +12,4 @@ export default function () {
   this.get('/users/me', (schema) => {
     return schema.users.first();
   });
-  this.post('/dj-rest-auth/facebook/', AUTH.loginResponseObject);
-  this.get(
-    `https://graph.facebook.com/v${ENV.FACEBOOK_API_VERSION}/oauth/access_token`,
-    AUTH.facebookAccessTokenObject
-  );
 }

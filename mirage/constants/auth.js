@@ -12,18 +12,6 @@ export default {
     },
   },
 
-  loginRequestFacebookObject: {
-    access_token: 'secret',
-    authenticator: 'authenticator:facebook',
-    refresh_token: 'secret',
-    user: {
-      email: 'test@test.com',
-      first_name: '',
-      last_name: '',
-      pk: '0',
-    },
-  },
-
   loginRequestTokenObject: {
     access_token: 'secret',
     authenticator: 'authenticator:token',
@@ -51,12 +39,6 @@ export default {
   currentUserResponseObject: {
     email: 'test@test.com',
     id: '0',
-  },
-
-  facebookAccessTokenObject: {
-    access_token: 'secret',
-    token_type: 'bearer',
-    expires_in: '0',
   },
 
   loginIdentificationObject: {

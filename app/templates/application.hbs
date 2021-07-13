@@ -1,24 +1,24 @@
 {{page-title 'EmberBaseTemplate'}}
-<div class="menu">
-  <LinkTo @route="index">
-    <h2 id="title">
+<div class='menu'>
+  <LinkTo @route='index'>
+    <h2 id='title'>
       Welcome to Ember
     </h2>
   </LinkTo>
   {{#if this.session.isAuthenticated}}
     <button
-      data-test-action="logout"
-      type="button"
+      data-test-action='logout'
+      type='button'
       {{on 'click' this.invalidateSession}}
     >
       Logout
     </button>
   {{else}}
-    <LinkTo @route="login">
+    <LinkTo @route='login'>
       Login
     </LinkTo>
   {{/if}}
 </div>
-<div class="main">
+<div class='main'>
   {{outlet}}
 </div>
