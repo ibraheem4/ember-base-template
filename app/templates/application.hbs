@@ -6,7 +6,11 @@
     </h2>
   </LinkTo>
   {{#if this.session.isAuthenticated}}
-    <button type='button' {{on 'click' this.invalidateSession}}>
+    <button
+      data-test-action='logout'
+      type='button'
+      {{on 'click' this.invalidateSession}}
+    >
       Logout
     </button>
   {{/if}}

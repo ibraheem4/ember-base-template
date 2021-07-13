@@ -1,5 +1,5 @@
-import AUTH from 'ourplace-web/mirage/constants/auth';
-import ENV from 'ourplace-web/config/environment';
+import AUTH from 'ember-base-template/mirage/constants/auth';
+import ENV from 'ember-base-template/config/environment';
 
 export default function () {
   // API configuration

@@ -5,6 +5,7 @@
   </label>
   <input
     id='identification'
+    data-test-input='email'
     placeholder='Enter Login'
     value={{this.identification}}
     {{on 'change' this.updateIdentification}}
@@ -14,11 +15,12 @@
   </label>
   <input
     id='password'
+    data-test-input='current-password'
     placeholder='Enter Password'
     value={{this.password}}
     {{on 'change' this.updatePassword}}
   />
-  <button type='submit'>
+  <button data-test-action='login' type='submit'>
     Login
   </button>
   {{#if this.errorMessage}}
