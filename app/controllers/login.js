@@ -8,6 +8,8 @@ export default class LoginController extends Controller {
   @service currentUser;
 
   @tracked errorMessage;
+  @tracked identification;
+  @tracked password;
 
   @action
   async authenticate(e) {
@@ -18,7 +20,7 @@ export default class LoginController extends Controller {
       password: password,
     };
     const authenticator = 'authenticator:token';
-    await this.authenticateWithCredentials(authenticator, identification);
+    await this.authenticateWithCredentials(authenticator, credentials);
     try {
       await this.session.authenticate(authenticator, credentials);
     } catch (error) {
@@ -47,20 +49,5 @@ export default class LoginController extends Controller {
         error.error ||
         error;
     }
-
-    if (this.session.isAuthenticated) {
-      // What to do with all this success?
-      this.transitionToRoute('index');
-    }
-  }
-
-  @action
-  updateIdentification(e) {
-    this.identification = e.target.value;
-  }
-
-  @action
-  updatePassword(e) {
-    this.password = e.target.value;
   }
 }
