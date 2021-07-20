@@ -6,9 +6,9 @@ module.exports = {
     'git checkout --', // Revert changes
   ],
 
-  '**/*.js': ['eslint --fix', 'git add'],
+  '**/*.js': ['eslint --fix'],
 
-  '**/*.{scss,css}': ['stylelint --fix', 'git add'],
+  '**/*.{scss,css}': ['stylelint --fix'],
 
-  '**/*.hbs': ['prettier **/*.hbs --write --parser=glimmer', 'git add'],
+  '**/*.hbs': ['prettier **/*.hbs --write --parser=glimmer'],
 };
