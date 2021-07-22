@@ -13,6 +13,9 @@
     >
       Logout
     </button>
+    <LinkTo @route='authenticated.profile'>
+      Profile
+    </LinkTo>
   {{else}}
     <LinkTo @route='login'>
       Login
