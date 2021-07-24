@@ -18,6 +18,12 @@ _NOTE:_ This app is designed to run on SSL, so the default commands (e.g. `yarn 
 
 ## Quickstart [](#quickstart)
 
+### Include `.env` [](#include-dotenv)
+
+Include `.env` file to set environment variables.  `.env.example` is included as an example.
+
+### Run startup scripts [](#run-startup-scripts)
+
 ```
 yarn generate-ssl && \
 yarn && \
