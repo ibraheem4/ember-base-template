@@ -7,18 +7,18 @@
 # --- COMMIT END ---
 
 # Type:
+
+#    build      (building project, upgrade/downgrade dependencies)
+#    ci         (changing ci workflows)
+#    chore      (updating yarn tasks etc; no production code change)
+#    docs       (changes to documentation, README)
 #    feat       (new feature)
 #    fix        (bug fix)
-#    refactor   (refactoring production code, eg. renaming a variable)
 #    perf       (performance improvements)
-#    style      (formatting, missing semi colons, etc; no production code change)
-#    docs       (changes to documentation)
-#    test       (adding or refactoring tests; no production code change)
-#    chore      (updating grunt tasks etc; no production code change)
-#    deps       (upgrading or downgrading dependencies)
-#    ci         (changing ci workflows)
+#    refactor   (refactoring production code, eg. renaming a variable)
 #    revert     (reverting code or commit)
-#    build      (bulding project)
+#    style      (formatting, missing semi colons, etc; no production code change)
+#    test       (adding or refactoring tests; no production code change)
 
 # Scope: commit scope
 
