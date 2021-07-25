@@ -9,8 +9,8 @@
 # Type:
 
 #    build      (building project, upgrade/downgrade dependencies)
-#    ci         (changing ci workflows)
 #    chore      (updating yarn tasks etc; no production code change)
+#    ci         (changing ci workflows)
 #    docs       (changes to documentation, README)
 #    feat       (new feature)
 #    fix        (bug fix)
@@ -43,6 +43,6 @@
 
 # Links:
 #   Conventional Commits (https://www.conventionalcommits.org)
-#   Angular (https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit)
+#   Angular Commit Format (https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit)
 
 # ----------------------------------------------------------------

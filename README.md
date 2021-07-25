@@ -123,6 +123,7 @@ Upload `SERVER_CRT` and `SERVER_KEY` on GitHub.
 - [ember-cli](https://ember-cli.com/)
 - [ember-cli-mirage](https://www.ember-cli-mirage.com/)
 - [husky](https://github.com/typicode/husky)
+- [Conventional Commits](https://www.conventionalcommits.org)
 - Development Browser Extensions
   - [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   - [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
