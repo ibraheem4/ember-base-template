@@ -51,15 +51,15 @@ export default class SignupController extends Controller {
         await this.currentUser.load();
       })
       .catch((error) => {
-        error.text().then((err) => {
-          const errorMessageObject = JSON.parse(err);
-          this.errorMessage =
-            errorMessageObject.non_field_errors ||
-            errorMessageObject.email ||
-            errorMessageObject.password1 ||
-            errorMessageObject.password2 ||
-            errorMessageObject.error ||
-            errorMessageObject;
+        error.text().then((errorText) => {
+          const errorTextObject = JSON.parse(errorText);
+          this.errorText =
+            errorTextObject.non_field_errors ||
+            errorTextObject.email ||
+            errorTextObject.password1 ||
+            errorTextObject.password2 ||
+            errorTextObject.error ||
+            errorTextObject;
         });
       });
   }
