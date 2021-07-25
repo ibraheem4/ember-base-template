@@ -53,7 +53,7 @@ export default class SignupController extends Controller {
       .catch((error) => {
         error.text().then((errorText) => {
           const errorTextObject = JSON.parse(errorText);
-          this.errorText =
+          this.errorMessage =
             errorTextObject.non_field_errors ||
             errorTextObject.email ||
             errorTextObject.password1 ||
