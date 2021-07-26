@@ -10,5 +10,5 @@ module.exports = {
 
   '**/*.{scss,css}': ['prettier --write'],
 
-  '**/*.hbs': ['prettier **/*.hbs --write --parser=glimmer'],
+  '**/*.hbs': ['ember-template-lint'],
 };
