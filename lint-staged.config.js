@@ -8,7 +8,7 @@ module.exports = {
 
   '**/*.js': ['prettier --write'],
 
-  '**/*.{scss,css}': ['prettier --write'],
+  '**/*.{scss,css}': ['stylelint'],
 
   '**/*.hbs': ['ember-template-lint'],
 };
