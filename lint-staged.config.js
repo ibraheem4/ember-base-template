@@ -6,7 +6,7 @@ module.exports = {
     'git checkout --', // Revert changes
   ],
 
-  '**/*.js': ['prettier --write'],
+  '**/*.js': ['eslint'],
 
   '**/*.{scss,css}': ['stylelint'],
 
