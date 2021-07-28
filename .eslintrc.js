@@ -10,11 +10,12 @@ module.exports = {
       legacyDecorators: true,
     },
   },
-  plugins: ['ember'],
+  plugins: ['ember', 'qunit'],
   extends: [
     'eslint:recommended',
     'plugin:ember/recommended',
     'plugin:prettier/recommended',
+    'plugin:qunit/recommended',
   ],
   env: {
     es6: true,
