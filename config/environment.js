@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'ember-base-template',

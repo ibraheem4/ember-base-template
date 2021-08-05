@@ -12,8 +12,9 @@ export default class LoginController extends Controller {
   @tracked password;
 
   @action
-  async authenticate(e) {
-    e.preventDefault();
+  async authenticate(error) {
+    const { session } = this;
+    error.preventDefault();
     let { identification, password } = this;
     const credentials = {
       email: identification,
@@ -22,7 +23,7 @@ export default class LoginController extends Controller {
     const authenticator = 'authenticator:token';
     await this.authenticateWithCredentials(authenticator, credentials);
     try {
-      await this.session.authenticate(authenticator, credentials);
+      await session.authenticate(authenticator, credentials);
     } catch (error) {
       this.errorMessage =
         error.json.non_field_errors ||
@@ -32,15 +33,16 @@ export default class LoginController extends Controller {
         error;
     }
 
-    if (this.session.isAuthenticated) {
+    if (session.isAuthenticated) {
       // What to do with all this success?
       this.transitionToRoute('index');
     }
   }
 
   async authenticateWithCredentials(authenticator, credentials) {
+    const { session } = this;
     try {
-      await this.session.authenticate(authenticator, credentials);
+      await session.authenticate(authenticator, credentials);
     } catch (error) {
       this.errorMessage =
         error.json.non_field_errors ||

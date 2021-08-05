@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
   root: true,
   parser: 'babel-eslint',
@@ -10,19 +8,22 @@ module.exports = {
       legacyDecorators: true,
     },
   },
-  plugins: ['ember', 'qunit'],
+  plugins: ['ember', 'prettier', 'qunit', 'unicorn'],
   extends: [
     'eslint:recommended',
     'plugin:ember/recommended',
     'plugin:prettier/recommended',
     'plugin:qunit/recommended',
+    'plugin:unicorn/recommended',
   ],
   env: {
     es6: true,
     browser: true,
     node: true,
   },
-  rules: {},
+  rules: {
+    'unicorn/prefer-module': 'off',
+  },
   overrides: [
     // node files
     {
