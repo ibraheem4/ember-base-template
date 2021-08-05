@@ -85,6 +85,12 @@ Make use of the many generators for code, try `ember help generate` for more det
 - `ember test`
 - `ember test --server`
 
+#### Coverage testing [](#coverage-testing)
+
+- `yarn test:ember:coverage`
+
+> Open `coverage/index.html` in web browser.
+
 ### Linting [](#linting)
 
 - `yarn lint`
