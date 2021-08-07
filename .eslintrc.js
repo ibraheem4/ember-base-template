@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2021,
     sourceType: 'module',
@@ -8,13 +8,14 @@ module.exports = {
       legacyDecorators: true,
     },
   },
-  plugins: ['ember', 'prettier', 'qunit', 'unicorn'],
+  plugins: ['ember', 'prettier', 'qunit', 'unicorn', '@typescript-eslint'],
   extends: [
     'eslint:recommended',
     'plugin:ember/recommended',
     'plugin:prettier/recommended',
     'plugin:qunit/recommended',
     'plugin:unicorn/recommended',
+    'plugin:@typescript-eslint/recommended',
   ],
   env: {
     es6: true,

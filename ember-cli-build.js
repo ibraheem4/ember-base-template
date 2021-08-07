@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 const purgeCSS = {

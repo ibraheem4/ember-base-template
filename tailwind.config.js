@@ -140,6 +140,7 @@ module.exports = {
     fontSize: ['responsive', 'direction'],
     opacity: ['disabled'],
   },
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
   plugins: [require('tailwindcss-dir')()],
   darkMode: 'class',
 };
