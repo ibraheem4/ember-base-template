@@ -17,6 +17,9 @@ module.exports = function (defaults) {
   const isProduction = ['production', 'staging'].includes(environment);
 
   const options = {
+    babel: {
+      sourceMaps: 'inline',
+    },
     postcssOptions: {
       compile: {
         plugins: [
