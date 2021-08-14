@@ -30,6 +30,17 @@ module.exports = function (defaults) {
         ],
       },
     },
+    'ember-cli-image-transformer': {
+      images: [
+        {
+          inputFilename: 'public/assets/icons/brand-icon.svg',
+          outputFileName: 'appicon-',
+          convertTo: 'png',
+          destination: 'assets/icons/',
+          sizes: [32, 96, 192, 512],
+        },
+      ],
+    },
   };
 
   let app = new EmberApp(defaults, options);
