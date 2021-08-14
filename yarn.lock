@@ -6752,6 +6752,19 @@ ember-test-selectors@6.0.0:
     ember-cli-babel "^7.26.4"
     ember-cli-version-checker "^5.1.2"
 
+ember-web-app@5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/ember-web-app/-/ember-web-app-5.0.1.tgz#f0bb8dc670ab0e04677c6c6dc7bfabf0e681ab29"
+  integrity sha512-437ue2c2dy8zwjoUohjLqs+Opb4c8bHVw6U3keKYb8F3Mk/XoFTFsgKgFHIUlb7SyBiAQD+6JsNjGXX71Kljcg==
+  dependencies:
+    broccoli-asset-rev "^3.0.0"
+    broccoli-caching-writer "^3.0.3"
+    broccoli-merge-trees "^4.2.0"
+    ember-cli-babel "^7.23.0"
+    jsdom "^16.4.0"
+    web-app-manifest-validator "^1.1.0"
+    xmlbuilder "^15.1.1"
+
 emoji-regex@^8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-8.0.0.tgz#e818fd69ce5ccfcb404594f842963bf53164cc37"
@@ -8796,6 +8809,11 @@ is-alphanumerical@^1.0.0:
   dependencies:
     is-alphabetical "^1.0.0"
     is-decimal "^1.0.0"
+
+is-array@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/is-array/-/is-array-1.0.1.tgz#e9850cc2cc860c3bc0977e84ccf0dd464584279a"
+  integrity sha1-6YUMwsyGDDvAl36EzPDdRkWEJ5o=
 
 is-arrayish@^0.2.1:
   version "0.2.1"
@@ -14156,6 +14174,13 @@ wcwidth@^1.0.1:
   dependencies:
     defaults "^1.0.3"
 
+web-app-manifest-validator@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/web-app-manifest-validator/-/web-app-manifest-validator-1.1.0.tgz#f84f03af2df9819755cf1fedb7063a7db4972755"
+  integrity sha512-svXrKIh5OGymneZwVCWJmCIeKkaaz+kngb2PbZ7rEuamlwr0imVQRH4M9ZKwGYUcyJ0wL1i+awtJ/kj+9PySEw==
+  dependencies:
+    is-array "^1.0.1"
+
 webidl-conversions@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-5.0.0.tgz#ae59c8a00b121543a2acc65c0434f57b0fc11aff"
@@ -14380,6 +14405,11 @@ xml-name-validator@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/xml-name-validator/-/xml-name-validator-3.0.0.tgz#6ae73e06de4d8c6e47f9fb181f78d648ad457c6a"
   integrity sha512-A5CUptxDsvxKJEU3yO6DuWBSJz/qizqzJKOMIfUJHETbBw/sFaDxgd6fxm1ewUaM0jZ444Fc5vC5ROYurg/4Pw==
+
+xmlbuilder@^15.1.1:
+  version "15.1.1"
+  resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-15.1.1.tgz#9dcdce49eea66d8d10b42cae94a79c3c8d0c2ec5"
+  integrity sha512-yMqGBqtXyeN1e3TGYvgNgDVZ3j84W4cwkOXQswghol6APgZWaff9lnbvN7MHYJOiXsvGPXtjTYJEiC9J2wv9Eg==
 
 xmlchars@^2.2.0:
   version "2.2.0"
