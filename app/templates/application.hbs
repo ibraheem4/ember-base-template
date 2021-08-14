@@ -1,10 +1,5 @@
 {{page-title "EmberBaseTemplate"}}
 <div class="menu">
-  <LinkTo @route="index">
-    <h2 id="title">
-      Welcome to Ember
-    </h2>
-  </LinkTo>
   <Site::Logo />
   {{#if this.session.isAuthenticated}}
     <button
