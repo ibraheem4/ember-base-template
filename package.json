@@ -98,6 +98,7 @@
     "ember-page-title": "^6.2.1",
     "ember-qunit": "^5.1.4",
     "ember-resolver": "^8.0.2",
+    "ember-set-body-class": "1.0.2",
     "ember-simple-auth": "3.1.0",
     "ember-simple-auth-token": "5.2.2",
     "ember-sinon-qunit": "^5.0.0",

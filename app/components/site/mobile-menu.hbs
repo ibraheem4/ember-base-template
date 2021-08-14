@@ -1,0 +1,21 @@
+<div
+  data-test-menu="mobile"
+  class="block mt-2 space-y-1 border-t border-gray-200 md:hidden"
+>
+  {{#if this.session.isAuthenticated}}
+    <Site::LogoutButton />
+  {{else}}
+    <LinkTo
+      @route="login"
+      class="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-100"
+    >
+      Login
+    </LinkTo>
+    <LinkTo
+      @route="signup"
+      class="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-100"
+    >
+      Sign Up
+    </LinkTo>
+  {{/if}}
+</div>

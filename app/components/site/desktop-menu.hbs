@@ -1,0 +1,21 @@
+<div
+  data-test-menu="desktop"
+  class="items-center justify-end flex-1 hidden space-x-8 md:flex rtl:space-x-reverse rtl:space-x-8 lg:w-0"
+>
+  {{#if this.session.isAuthenticated}}
+    <Site::LogoutButton />
+  {{else}}
+    <LinkTo
+      @route="login"
+      class="px-4 py-2 text-base font-medium leading-6 text-gray-700 rounded-md dark:text-gray-200 hover:text-gray-900 hover:dark:text-gray-500 whitespace-nowrap"
+    >
+      Login
+    </LinkTo>
+    <LinkTo
+      @route="signup"
+      class="items-center justify-center px-4 py-2 text-base font-medium leading-6 text-gray-700 transition duration-150 ease-in-out border border-gray-300 rounded-md shadow-sm dark:text-gray-200 hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-900 whitespace-nowrap"
+    >
+      Sign up
+    </LinkTo>
+  {{/if}}
+</div>

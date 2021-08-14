@@ -7298,6 +7298,13 @@ ember-router-generator@^2.0.0:
     "@babel/traverse" "^7.4.5"
     recast "^0.18.1"
 
+ember-set-body-class@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/ember-set-body-class/-/ember-set-body-class-1.0.2.tgz#a970933f00e57ece6b6a88b96daf22f2374c3c34"
+  integrity sha512-SEsTwFp9SHTg4LgebhkUuLgYWg1VZD7I1QcrV2sTY583wu216OThoSs5szvS/KgSc1xD1Z22TFvOb848t2hGfw==
+  dependencies:
+    ember-cli-babel "^7.22.1"
+
 ember-simple-auth-token@5.2.2:
   version "5.2.2"
   resolved "https://registry.yarnpkg.com/ember-simple-auth-token/-/ember-simple-auth-token-5.2.2.tgz#859163de5836f682203500fea4d66f235c3794dc"
