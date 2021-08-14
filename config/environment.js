@@ -28,6 +28,10 @@ module.exports = function (environment) {
       ],
     },
 
+    flashMessageDefaults: {
+      extendedTimeout: 1000,
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
