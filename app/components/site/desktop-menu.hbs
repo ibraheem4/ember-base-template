@@ -4,6 +4,12 @@
 >
   {{#if this.session.isAuthenticated}}
     <LinkTo
+      @route="authenticated.user"
+      class="text-base font-medium leading-6 text-gray-700 dark:text-gray-200 hover:text-gray-900 hover:dark:text-gray-500 whitespace-nowrap"
+    >
+      User
+    </LinkTo>
+    <LinkTo
       @route="authenticated.profile"
       class="text-base font-medium leading-6 text-gray-700 dark:text-gray-200 hover:text-gray-900 hover:dark:text-gray-500 whitespace-nowrap"
     >

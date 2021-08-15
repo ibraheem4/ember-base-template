@@ -12,4 +12,7 @@ export default function () {
   this.get('/users/me', (schema) => {
     return schema.users.first();
   });
+
+  // Authenticated routes
+  this.get('/users');
 }

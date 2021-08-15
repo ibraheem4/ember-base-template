@@ -12,6 +12,7 @@ Router.map(function () {
   this.route('signup');
   this.route('authenticated', { path: '/user' }, function () {
     this.route('profile');
+    this.route('user');
   });
   this.route('not-found', { path: '/*path' });
 });

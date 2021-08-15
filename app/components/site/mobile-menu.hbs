@@ -3,6 +3,18 @@
   class="block mt-2 space-y-1 border-t border-gray-200 md:hidden"
 >
   {{#if this.session.isAuthenticated}}
+    <LinkTo
+      @route="authenticated.user"
+      class="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900"
+    >
+      User
+    </LinkTo>
+    <LinkTo
+      @route="authenticated.profile"
+      class="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900"
+    >
+      Profile
+    </LinkTo>
     <Site::LogoutButton />
   {{else}}
     <LinkTo
