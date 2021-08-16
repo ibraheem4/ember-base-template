@@ -1,48 +1,53 @@
 {{page-title "Login"}}
-<form class="mb-6 space-y-4" {{on "submit" this.authenticate}}>
-  <label
-    for="identification"
-    class="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-200"
-  >
-    Login
-  </label>
-  <Input
-    required="true"
-    id="identification"
-    data-test-input="email"
-    placeholder="Enter Login"
-    autocomplete="username"
-    @value={{this.identification}}
-    @type="email"
-    class="block w-full px-3 py-2 mb-1 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none sm:text-sm dark:bg-black dark:text-gray-200"
-  />
-  <label
-    for="current-password"
-    class="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-200"
-  >
-    Password
-  </label>
-  <Input
-    required="true"
-    id="password"
-    data-test-input="current-password"
-    placeholder="Enter Password"
-    autocomplete="current-password"
-    @value={{this.password}}
-    @type="password"
-    class="block w-full px-3 py-2 mb-1 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none sm:text-sm dark:bg-black dark:text-gray-200"
-  />
-  <button
-    data-test-action="login"
-    type="submit"
-    class="flex justify-center w-full px-4 py-2 mb-1 text-sm font-medium text-gray-700 border border-gray-300 rounded-md shadow-sm hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-900 disabled:opacity-60"
-  >
-    Login
-  </button>
-  {{#if this.errorMessage}}
-    <p>
-      {{this.errorMessage}}
-    </p>
-  {{/if}}
-</form>
-{{outlet}}
+<div class="flex flex-col sm:px-6 lg:px-8">
+  <div class="sm:mx-auto sm:w-full sm:max-w-md">
+    <div class="p-4 shadow sm:rounded-lg sm:px-10">
+      <form class="mb-6 space-y-4" {{on "submit" this.authenticate}}>
+        <label
+          for="identification"
+          class="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-200"
+        >
+          Login
+        </label>
+        <Input
+          required="true"
+          id="identification"
+          data-test-input="email"
+          placeholder="Enter Login"
+          autocomplete="username"
+          @value={{this.identification}}
+          @type="email"
+          class="block w-full px-3 py-2 mb-1 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none sm:text-sm dark:bg-black dark:text-gray-200"
+        />
+        <label
+          for="current-password"
+          class="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-200"
+        >
+          Password
+        </label>
+        <Input
+          required="true"
+          id="password"
+          data-test-input="current-password"
+          placeholder="Enter Password"
+          autocomplete="current-password"
+          @value={{this.password}}
+          @type="password"
+          class="block w-full px-3 py-2 mb-1 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none sm:text-sm dark:bg-black dark:text-gray-200"
+        />
+        <button
+          data-test-action="login"
+          type="submit"
+          class="flex justify-center w-full px-4 py-2 mb-1 text-sm font-medium text-gray-700 border border-gray-300 rounded-md shadow-sm hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-900 disabled:opacity-60"
+        >
+          Login
+        </button>
+        {{#if this.errorMessage}}
+          <p>
+            {{this.errorMessage}}
+          </p>
+        {{/if}}
+      </form>
+    </div>
+  </div>
+</div>
