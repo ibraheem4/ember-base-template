@@ -2,9 +2,9 @@
   <div class="my-4 overflow-x-auto">
     <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
       <div
-        class="overflow-hidden border-b border-gray-200 shadow sm:rounded-lg"
+        class="overflow-hidden border border-gray-200 rounded-lg shadow dark:border-gray-700"
       >
-        <table class="min-w-full divide-y divide-gray-200">
+        <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
           <thead>
             <tr>
               <th
@@ -14,7 +14,7 @@
               </th>
             </tr>
           </thead>
-          <tbody class="divide-y divide-gray-200">
+          <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
             {{#each this.sortedUsers as |user index|}}
               <tr data-test-sorted-user="{{index}}">
                 <td

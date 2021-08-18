@@ -3,7 +3,7 @@
     <div>
       <label
         for="email"
-        class="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-500"
+        class="block mb-1 font-medium text-gray-700 text-md dark:text-gray-500"
       >
         Email
       </label>
@@ -19,7 +19,7 @@
     <div>
       <label
         for="language"
-        class="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-500"
+        class="block mb-1 font-medium text-gray-700 text-md dark:text-gray-500"
       >
         Language
       </label>
@@ -35,7 +35,7 @@
     <div>
       <label
         for="dark-mode"
-        class="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-500"
+        class="block mb-1 font-medium text-gray-700 text-md dark:text-gray-500"
       >
         Dark mode
       </label>
@@ -50,7 +50,7 @@
     <div>
       <label
         for="username"
-        class="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-500"
+        class="block mb-1 font-medium text-gray-700 text-md dark:text-gray-500"
       >
         Username
       </label>
@@ -66,7 +66,7 @@
     <div>
       <label
         for="first-name"
-        class="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-500"
+        class="block mb-1 font-medium text-gray-700 text-md dark:text-gray-500"
       >
         First name
       </label>
@@ -82,7 +82,7 @@
     <div>
       <label
         for="last-name"
-        class="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-500"
+        class="block mb-1 font-medium text-gray-700 text-md dark:text-gray-500"
       >
         Last name
       </label>
@@ -100,7 +100,7 @@
     type="button"
     disabled={{this.saveCurrentUser.isRunning}}
     data-test-action="saveProfile"
-    class="flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 border-2 border-gray-300 rounded-md shadow-sm dark:bg-indigo-900 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-indigo-700 dark:text-gray-500 disabled:opacity-60"
+    class="flex justify-center w-full px-4 py-2 text-lg font-medium text-gray-700 border-2 border-gray-300 rounded-md shadow-sm dark:bg-indigo-900 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-indigo-700 dark:text-gray-500 disabled:opacity-60"
     {{on "click" (perform this.saveCurrentUser)}}
   >
     {{#if this.saveCurrentUser.isRunning}}

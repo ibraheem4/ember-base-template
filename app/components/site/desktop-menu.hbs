@@ -5,13 +5,13 @@
   {{#if this.session.isAuthenticated}}
     <LinkTo
       @route="authenticated.user"
-      class="text-base font-medium leading-6 text-gray-700 hover:text-gray-900 dark:text-gray-500 dark:hover:text-gray-200 whitespace-nowrap"
+      class="text-lg font-medium leading-6 text-gray-700 hover:text-gray-900 dark:text-gray-500 dark:hover:text-gray-200 whitespace-nowrap"
     >
       User
     </LinkTo>
     <LinkTo
       @route="authenticated.profile"
-      class="text-base font-medium leading-6 text-gray-700 dark:text-gray-500 hover:text-gray-900 dark:hover:text-gray-200 whitespace-nowrap"
+      class="text-lg font-medium leading-6 text-gray-700 dark:text-gray-500 hover:text-gray-900 dark:hover:text-gray-200 whitespace-nowrap"
     >
       Profile
     </LinkTo>
@@ -19,13 +19,13 @@
   {{else}}
     <LinkTo
       @route="login"
-      class="px-4 py-2 text-base font-medium leading-6 text-gray-700 rounded-md dark:text-gray-500 hover:text-gray-900 dark:hover:text-gray-200 whitespace-nowrap"
+      class="px-4 py-2 text-lg font-medium leading-6 text-gray-700 rounded-md dark:text-gray-500 hover:text-gray-900 dark:hover:text-gray-200 whitespace-nowrap"
     >
       Login
     </LinkTo>
     <LinkTo
       @route="signup"
-      class="items-center justify-center px-4 py-2 text-base font-medium leading-6 text-gray-700 transition duration-150 ease-in-out border border-gray-300 rounded-md shadow-sm dark:border-gray-700 dark:text-gray-500 dark:hover:text-gray-200 hover:text-gray-900 dark:bg-indigo-900 hover:bg-gray-100 dark:hover:bg-indigo-700 whitespace-nowrap"
+      class="items-center justify-center px-4 py-2 text-lg font-medium leading-6 text-gray-700 border border-gray-300 rounded-md shadow-sm dark:border-gray-700 dark:text-gray-500 dark:hover:text-gray-200 hover:text-gray-900 dark:bg-indigo-900 hover:bg-gray-100 dark:hover:bg-indigo-700 whitespace-nowrap"
     >
       Sign up
     </LinkTo>
