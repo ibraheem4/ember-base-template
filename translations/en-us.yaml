@@ -1,0 +1,45 @@
+brown_dog: Brown Dog
+close_main_menu: Close main menu
+confirm_password: Confirm Password
+copyright: Project Name © 2021
+dark_mode: Dark Mode
+email: Email
+enter_email: Enter Email Address
+enter_login: Enter Login
+enter_new_password: Enter new Password
+enter_password: Enter Password
+expand_collapse: expand collapse
+facebook: Facebook
+first_name: First Name
+forgot_password: Forgot Password?
+home: Home
+id: ID
+language: Language
+language_name: English
+last_name: Last Name
+light_dark: Light Dark
+loading: Loading
+log_in_with_facebook: Login with Facebook
+log_in_with_google: Login with Google
+login: Login
+logout: Logout
+main_navigation: Main Navigation
+open_main_menu: Open main menu
+or_continue_with: Or continue with
+page_not_found: Page not found.
+password: Password
+password_confirmation: Password confirmation
+placeholder: Placeholder
+profile: Profile
+project_name: Project Name
+register: Register
+remember_me: Remember me
+restricted: Restricted
+save: Save
+saving: Saving
+search: Search
+sign_up: Sign Up
+signed_in_as: 'Signed in as {user}'
+user: User
+username: Username
+

@@ -1,0 +1,45 @@
+brown_dog: Perro marrón
+close_main_menu: Cerrar el menú principal
+confirm_password: confirme la contraseña
+copyright: Nombre del proyecto © 2021
+dark_mode: Modo oscuro
+email: Correo Electrónico
+enter_email: Ingrese correo electrónico
+enter_login: Ingresar Login
+enter_new_password: Introduzca una nueva contraseña
+enter_password: Introduzca la contraseña
+expand_collapse: expandir el colapso
+facebook: Facebook
+first_name: Nombre de pila
+forgot_password: ¿Olvidó la contraseña?
+home: Inicio
+id: Id
+language: Idioma
+language_name: Español
+last_name: Apellido
+light_dark: oscura luz
+loading: Cargando
+log_in_with_facebook: Inicia sesión con Facebook
+log_in_with_google: Inicia sesión con Google
+login: Entrar
+logout: Cierre de sesión
+main_navigation: Navegación Principal
+open_main_menu: Abrir el menú principal
+or_continue_with: O continuar con
+page_not_found: Página no encontrada.
+password: Contraseña
+password_confirmation: Confirmación de contraseña
+placeholder: Marcador de posición
+profile: Perfil
+project_name: Nombre del proyecto
+register: Registrarse
+remember_me: Recuérdame.
+restricted: Restringido
+save: Guardar
+saving: Guardando
+search: Buscar
+sign_up: Inscríbete
+signed_in_as: 'Firmado como {user}'
+user: Usuario
+username: Nombre de usuario
+

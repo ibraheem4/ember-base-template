@@ -8,26 +8,26 @@
       @route="authenticated.user"
       class="block px-4 py-2 text-lg font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-500 dark:hover:text-gray-200 dark:hover:bg-gray-900"
     >
-      User
+      {{t "user"}}
     </LinkTo>
     <LinkTo
       @route="authenticated.profile"
       class="block px-4 py-2 text-lg font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-500 dark:hover:text-gray-200 dark:hover:bg-gray-900"
     >
-      Profile
+      {{t "profile"}}
     </LinkTo>
   {{else}}
     <LinkTo
       @route="login"
       class="block px-4 py-2 text-lg font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-500 dark:hover:text-gray-200 dark:hover:bg-gray-900"
     >
-      Login
+      {{t "login"}}
     </LinkTo>
     <LinkTo
       @route="signup"
       class="block px-4 py-2 text-lg font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-500 dark:hover:text-gray-200 dark:hover:bg-gray-900"
     >
-      Sign Up
+      {{t "sign_up"}}
     </LinkTo>
   {{/if}}
 </div>

@@ -5,7 +5,6 @@ import { tracked } from '@glimmer/tracking';
 
 export default class LoginController extends Controller {
   @service session;
-  @service currentUser;
 
   @tracked errorMessage;
   @tracked identification;

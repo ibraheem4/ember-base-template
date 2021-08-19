@@ -15,7 +15,7 @@ export default class ApplicationController extends Controller {
   @tracked isDarkModeEnabled = false;
 
   get darkMode() {
-    return this.isDarkModeEnabled || this.session.data.darkMode;
+    return this.isDarkModeEnabled && this.session.data.darkMode;
   }
 
   @action
