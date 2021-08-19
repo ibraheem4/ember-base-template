@@ -18,6 +18,7 @@ language: Language
 language_name: English
 last_name: Last Name
 light_dark: Light Dark
+light_mode: Light Mode
 loading: Loading
 log_in_with_facebook: Login with Facebook
 log_in_with_google: Login with Google

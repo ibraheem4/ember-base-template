@@ -18,6 +18,7 @@ language: Idioma
 language_name: Español
 last_name: Apellido
 light_dark: oscura luz
+light_mode: Modo de luz
 loading: Cargando
 log_in_with_facebook: Inicia sesión con Facebook
 log_in_with_google: Inicia sesión con Google

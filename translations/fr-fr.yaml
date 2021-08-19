@@ -18,6 +18,7 @@ language: Langue
 language_name: Français
 last_name: Nom de famille
 light_dark: clair foncé
+light_mode: Mode lumière
 loading: Chargement
 log_in_with_facebook: Connectez-vous avec Facebook
 log_in_with_google: Connectez-vous avec Google

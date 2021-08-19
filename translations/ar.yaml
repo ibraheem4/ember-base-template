@@ -18,6 +18,7 @@ language: لغة
 language_name: عربى
 last_name: الكنية
 light_dark: ضوء الظلام
+light_mode: وضع الضوء
 loading: جار التحميل
 log_in_with_facebook: تسجيل الدخول باستخدام الفيسبوك
 log_in_with_google: تسجيل الدخول مع جوجل

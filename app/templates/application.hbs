@@ -24,7 +24,7 @@
         {{on "click" this.toggleDarkMode}}
       >
         <span class="sr-only">
-          {{if this.darkMode "Close main menu" "Open main menu"}}
+          {{if this.darkMode (t "dark_mode") (t "dark_mode")}}
         </span>
         {{#if this.darkMode}}
           <svg
@@ -90,8 +90,8 @@
             <span class="sr-only">
               {{if
                 this.isMobileMenuExpanded
-                "Close main menu"
-                "Open main menu"
+                (t "close_main_menu")
+                (t "open_main_menu")
               }}
             </span>
             <svg
