@@ -130,10 +130,21 @@
 </main>
 <footer class="dark:bg-black">
   <div class="mx-4 mb-3">
-    <div
-      class="absolute text-xs text-gray-700 origin-top-right border-gray-300 dark:text-gray-500 dark:border-gray-700 w-36 rtl:text-sm"
-    >
-      {{t "placeholder"}}
+    <div class="absolute origin-top-right w-36">
+      <PowerSelect
+        @options={{this.availableLocales}}
+        @selected={{this.selectedLocale}}
+        @onChange={{this.changeLocale}}
+        as |locale|
+      >
+        <button
+          id="locale-select"
+          type="button"
+          class="inline-flex justify-center w-full px-2 py-1 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:text-gray-900 dark:text-gray-500 dark:hover:text-gray-200 dark:border-gray-700 dark:bg-black hover:bg-gray-100 dark:hover:bg-gray-900"
+        >
+          {{locale.languageText}}
+        </button>
+      </PowerSelect>
     </div>
     <small
       class="block py-1 text-xs text-right text-gray-700 dark:text-gray-500 rtl:text-left rtl:text-sm"

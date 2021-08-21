@@ -41,6 +41,9 @@ module.exports = function (defaults) {
         },
       ],
     },
+    'ember-power-select': {
+      theme: false,
+    },
   };
 
   let app = new EmberApp(defaults, options);
