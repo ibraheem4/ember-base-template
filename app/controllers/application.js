@@ -8,6 +8,7 @@ import { getOwner } from '@ember/application';
 export default class ApplicationController extends Controller {
   @service session;
   @service intl;
+  @service locale;
 
   ICON_X = 'M6 18L18 6M6 6l12 12';
   ICON_HAMBURGER = 'M4 6h16M4 12h16M4 18h16';
@@ -33,33 +34,10 @@ export default class ApplicationController extends Controller {
     await this.session.set('data.darkMode', this.isDarkModeEnabled);
   }
 
-  get availableLocales() {
-    return this.intl.locales.map((locale) => ({
-      languageCode: locale,
-      languageText: this.intl.lookup('language_name', locale),
-    }));
-  }
-
   get selectedLocale() {
     const primaryLocale = this.intl.primaryLocale;
-    return this.availableLocales.find(
+    return this.locale.availableLocales.find(
       (locale) => locale.languageCode === primaryLocale
     );
-  }
-
-  @action
-  async changeLocale(locale) {
-    const directionValue = this.RTL_LANGUAGES.includes(
-      locale.languageCode.toLowerCase()
-    )
-      ? 'rtl'
-      : 'ltr';
-
-    getOwner(this)
-      .lookup('service:-document')
-      .documentElement.setAttribute('dir', directionValue);
-
-    await this.intl.setLocale(locale.languageCode);
-    await this.session.set('data.locale', this.intl.primaryLocale);
   }
 }

@@ -3,6 +3,7 @@ import { getOwner } from '@ember/application';
 import { inject as service } from '@ember/service';
 import calculateLocale from 'ember-base-template/utils/calculate-locale';
 import { tracked } from '@glimmer/tracking';
+import { action } from '@ember/object';
 
 export default class LocaleService extends Service {
   @service session;
@@ -83,5 +84,28 @@ export default class LocaleService extends Service {
       this.calculatedLocale = calculatedLocale;
       this.intl.setLocale(this.calculatedLocale);
     }
+  }
+
+  get availableLocales() {
+    return this.intl.locales.map((locale) => ({
+      languageCode: locale,
+      languageText: this.intl.lookup('language_name', locale),
+    }));
+  }
+
+  @action
+  async changeLocale(locale) {
+    const directionValue = this.RTL_LANGUAGES.includes(
+      locale.languageCode.toLowerCase()
+    )
+      ? 'rtl'
+      : 'ltr';
+
+    getOwner(this)
+      .lookup('service:-document')
+      .documentElement.setAttribute('dir', directionValue);
+
+    await this.intl.setLocale(locale.languageCode);
+    await this.session.set('data.locale', this.intl.primaryLocale);
   }
 }

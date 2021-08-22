@@ -132,9 +132,9 @@
   <div class="mx-4 mb-3">
     <div class="absolute origin-top-right w-36">
       <PowerSelect
-        @options={{this.availableLocales}}
-        @selected={{this.selectedLocale}}
-        @onChange={{this.changeLocale}}
+        @options={{this.locale.availableLocales}}
+        @selected={{this.locale.selectedLocale}}
+        @onChange={{this.locale.changeLocale}}
         as |locale|
       >
         <button
