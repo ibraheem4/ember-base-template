@@ -16,10 +16,6 @@ export default class ApplicationController extends Controller {
 
   @tracked isMobileMenuExpanded = false;
 
-  get isDarkModeEnabled() {
-    return this.darkMode.enabled || this.session.data.darkMode;
-  }
-
   @action
   async toggleMobileMenuExpanded() {
     await set(this, 'isMobileMenuExpanded', !this.isMobileMenuExpanded);

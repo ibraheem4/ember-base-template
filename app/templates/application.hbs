@@ -1,5 +1,5 @@
 {{page-title (t "project_name")}}
-{{#if this.isDarkModeEnabled}}
+{{#if this.darkMode.enabled}}
   {{set-body-class "flex flex-col min-h-screen dark"}}
 {{else}}
   {{set-body-class "flex flex-col min-h-screen"}}
@@ -24,9 +24,9 @@
         {{on "click" this.darkMode.toggleDarkMode}}
       >
         <span class="sr-only">
-          {{if this.isDarkModeEnabled (t "light_mode") (t "dark_mode")}}
+          {{if this.darkMode.enabled (t "light_mode") (t "dark_mode")}}
         </span>
-        {{#if this.isDarkModeEnabled}}
+        {{#if this.darkMode.enabled}}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
