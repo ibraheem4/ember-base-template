@@ -3,7 +3,6 @@ import { inject as service } from '@ember/service';
 import { action } from '@ember/object';
 import { set } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
-import { getOwner } from '@ember/application';
 
 export default class ApplicationController extends Controller {
   @service session;
