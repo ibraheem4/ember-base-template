@@ -8,29 +8,21 @@ export default class ApplicationController extends Controller {
   @service session;
   @service intl;
   @service locale;
+  @service darkMode;
 
   ICON_X = 'M6 18L18 6M6 6l12 12';
   ICON_HAMBURGER = 'M4 6h16M4 12h16M4 18h16';
   ICON_MOON = 'M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z';
 
-  RTL_LANGUAGES = Object.freeze(['ar']);
-
   @tracked isMobileMenuExpanded = false;
-  @tracked isDarkModeEnabled = false;
 
-  get darkMode() {
-    return this.isDarkModeEnabled || this.session.data.darkMode;
+  get isDarkModeEnabled() {
+    return this.darkMode.enabled || this.session.data.darkMode;
   }
 
   @action
   async toggleMobileMenuExpanded() {
     await set(this, 'isMobileMenuExpanded', !this.isMobileMenuExpanded);
-  }
-
-  @action
-  async toggleDarkMode() {
-    await set(this, 'isDarkModeEnabled', !this.isDarkModeEnabled);
-    await this.session.set('data.darkMode', this.isDarkModeEnabled);
   }
 
   get selectedLocale() {
