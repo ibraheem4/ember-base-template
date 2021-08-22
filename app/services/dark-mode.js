@@ -14,4 +14,10 @@ export default class DarkModeService extends Service {
     await set(this, 'enabled', !this.enabled);
     await this.session.set('data.darkMode', this.enabled);
   }
+
+  @action
+  async setDarkMode(value) {
+    await set(this, 'enabled', value);
+    await this.session.set('data.darkMode', value);
+  }
 }
