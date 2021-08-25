@@ -6,6 +6,7 @@ export default class CurrentUserService extends Service {
   @service session;
   @service store;
   @service locale;
+  @service darkMode;
 
   @tracked user = undefined;
   @tracked errorMessage = undefined;
@@ -24,5 +25,24 @@ export default class CurrentUserService extends Service {
     } else {
       this.locale.setupLocale();
     }
+  }
+
+  async fetch() {
+    try {
+      await this.load()
+        .then((user) => {
+          this.darkMode.setDarkMode(user.darkMode);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    } catch (error) {
+      this.errorMessage = error.error || error;
+      await this.invalidate();
+    }
+  }
+
+  async clear() {
+    this.session = undefined;
   }
 }
