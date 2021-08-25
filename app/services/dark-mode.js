@@ -6,8 +6,9 @@ import { tracked } from '@glimmer/tracking';
 
 export default class DarkModeService extends Service {
   @service session;
+  @service constants;
 
-  @tracked enabled = false;
+  @tracked enabled = this.constants.DEFAULT_DARK_MODE;
 
   @action
   async toggleDarkMode() {

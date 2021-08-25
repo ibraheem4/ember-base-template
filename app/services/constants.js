@@ -9,5 +9,5 @@ export default class ConstantsService extends Service {
     staging: 'STAGING',
   });
   DEFAULT_LOCALE = Object.freeze('en-us');
-  DEFAULT_DARK_MODE = Object.freeze(false);
+  DEFAULT_DARK_MODE = Object.freeze(true);
 }
