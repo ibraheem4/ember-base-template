@@ -10,8 +10,6 @@ export default class LocaleService extends Service {
   @service intl;
   @service constants;
 
-  RTL_LANGUAGES = Object.freeze(['ar']);
-
   @tracked directionValue = undefined;
   @tracked isRtl = undefined;
   @tracked isLtr = undefined;
@@ -23,7 +21,7 @@ export default class LocaleService extends Service {
     const selectedLocale = this.session.data.locale;
 
     if (selectedLocale) {
-      const directionValue = this.RTL_LANGUAGES.includes(
+      const directionValue = this.constants.RTL_LANGUAGES.includes(
         selectedLocale.toLowerCase()
       )
         ? 'rtl'
@@ -43,7 +41,7 @@ export default class LocaleService extends Service {
     } else if (loadedUser && loadedUser.language) {
       const userProfileLocale = loadedUser.language;
 
-      const directionValue = this.RTL_LANGUAGES.includes(
+      const directionValue = this.constants.RTL_LANGUAGES.includes(
         userProfileLocale.toLowerCase()
       )
         ? 'rtl'
@@ -66,7 +64,7 @@ export default class LocaleService extends Service {
         this.constants.DEFAULT_LOCALE
       );
 
-      const directionValue = this.RTL_LANGUAGES.includes(
+      const directionValue = this.constants.RTL_LANGUAGES.includes(
         calculatedLocale.toLowerCase()
       )
         ? 'rtl'
@@ -95,7 +93,7 @@ export default class LocaleService extends Service {
 
   @action
   async changeLocale(locale) {
-    const directionValue = this.RTL_LANGUAGES.includes(
+    const directionValue = this.constants.RTL_LANGUAGES.includes(
       locale.languageCode.toLowerCase()
     )
       ? 'rtl'

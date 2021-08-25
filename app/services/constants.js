@@ -10,4 +10,5 @@ export default class ConstantsService extends Service {
   });
   DEFAULT_LOCALE = Object.freeze('en-us');
   DEFAULT_DARK_MODE = Object.freeze(true);
+  RTL_LANGUAGES = Object.freeze(['ar']);
 }

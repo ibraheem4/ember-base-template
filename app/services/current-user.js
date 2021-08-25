@@ -6,6 +6,7 @@ export default class CurrentUserService extends Service {
   @service session;
   @service store;
   @service locale;
+  @service constants;
   @service darkMode;
 
   @tracked user = undefined;
@@ -44,5 +45,6 @@ export default class CurrentUserService extends Service {
 
   async clear() {
     this.session = undefined;
+    this.locale.setupLocale();
   }
 }
