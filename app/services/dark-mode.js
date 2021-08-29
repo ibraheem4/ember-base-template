@@ -2,6 +2,7 @@ import Service from '@ember/service';
 import { inject as service } from '@ember/service';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
+import { set } from '@ember/object';
 
 export default class DarkModeService extends Service {
   @service session;
@@ -10,14 +11,12 @@ export default class DarkModeService extends Service {
   @tracked enabled;
 
   @action
-  toggleDarkMode() {
-    const shouldBeDarkMode = !this.enabled;
-
-    this.enabled = shouldBeDarkMode;
+  async toggleDarkMode() {
+    await set(this, 'enabled', !this.enabled);
   }
 
   @action
-  setDarkMode(value) {
-    this.enabled = value;
+  async setDarkMode(value) {
+    await set(this, 'enabled', value);
   }
 }
