@@ -2,54 +2,7 @@
 <div class="flex flex-col sm:px-6 lg:px-8">
   <div class="sm:mx-auto sm:w-full sm:max-w-md">
     <div class="p-6 border rounded-lg shadow dark:border-gray-700 sm:px-10">
-      <form data-test-form="login-form" {{on "submit" this.authenticate}}>
-        <div class="mb-6 space-y-4">
-          <label
-            for="identification"
-            class="block mb-1 font-medium text-gray-700 text-md dark:text-gray-500"
-          >
-            {{t "email"}}
-          </label>
-          <Input
-            required="true"
-            id="identification"
-            data-test-input="email"
-            placeholder={{t "enter_email"}}
-            autocomplete="username"
-            @value={{this.identification}}
-            @type="email"
-            class="block w-full px-3 py-2 mb-1 placeholder-gray-600 border border-gray-300 rounded-md shadow-sm appearance-none dark:border-gray-700 sm:text-sm dark:bg-black dark:text-gray-500"
-          />
-          <label
-            for="current-password"
-            class="block mb-1 font-medium text-gray-700 text-md dark:text-gray-500"
-          >
-            {{t "password"}}
-          </label>
-          <Input
-            required="true"
-            id="password"
-            data-test-input="current-password"
-            placeholder={{t "enter_password"}}
-            autocomplete="current-password"
-            @value={{this.password}}
-            @type="password"
-            class="block w-full px-3 py-2 mb-1 placeholder-gray-600 border border-gray-300 rounded-md shadow-sm appearance-none dark:border-gray-700 sm:text-sm dark:bg-black dark:text-gray-500"
-          />
-          {{#if this.errorMessage}}
-            <p>
-              {{this.errorMessage}}
-            </p>
-          {{/if}}
-        </div>
-        <button
-          data-test-action="login"
-          type="submit"
-          class="flex justify-center w-full px-4 py-2 mb-1 font-medium text-gray-700 border-2 border-gray-300 rounded-md shadow-sm text-md dark:bg-indigo-900 dark:hover:bg-indigo-700 dark:border-gray-700 hover:bg-gray-100 dark:text-gray-500 dark:hover:text-gray-200 disabled:opacity-60"
-        >
-          {{t "login"}}
-        </button>
-      </form>
+      <Login::LoginForm />
     </div>
   </div>
 </div>

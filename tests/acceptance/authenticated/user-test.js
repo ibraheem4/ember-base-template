@@ -31,7 +31,10 @@ module('Acceptance | user/user', function (hooks) {
       'session data is set'
     );
 
-    // FIXME: this should flow through to /user/user route
-    assert.equal(currentURL(), '/', 'user is redirected to index after login');
+    assert.equal(
+      currentURL(),
+      '/user/user',
+      'user is redirected to index after login'
+    );
   });
 });

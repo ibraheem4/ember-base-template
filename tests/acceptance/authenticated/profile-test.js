@@ -31,7 +31,10 @@ module('Acceptance | user/profile', function (hooks) {
       'session data is set'
     );
 
-    // FIXME: this should flow through to /user/profile route
-    assert.equal(currentURL(), '/', 'user is redirected to index after login');
+    assert.equal(
+      currentURL(),
+      '/user/profile',
+      'user is redirected to index after login'
+    );
   });
 });
