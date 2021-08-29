@@ -104,6 +104,5 @@ export default class LocaleService extends Service {
       .documentElement.setAttribute('dir', directionValue);
 
     await this.intl.setLocale(locale.languageCode);
-    await this.session.set('data.locale', this.intl.primaryLocale);
   }
 }

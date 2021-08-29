@@ -9,7 +9,6 @@ import { action } from '@ember/object';
 export default class SignupController extends Controller {
   @service session;
   @service currentUser;
-  @service darkMode;
 
   @tracked errorMessage;
   @tracked email;
@@ -49,14 +48,9 @@ export default class SignupController extends Controller {
           // What to do with all this success?
           this.transitionToRoute('index');
         }
-        await this.currentUser
-          .load()
-          .then((user) => {
-            this.darkMode.setDarkMode(user.darkMode);
-          })
-          .catch((error) => {
-            console.log(error);
-          });
+        await this.currentUser.load().catch((error) => {
+          console.log(error);
+        });
       })
       .catch((error) => {
         error.text().then((errorText) => {
