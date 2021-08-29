@@ -44,7 +44,7 @@ export default class CurrentUserService extends Service {
   }
 
   async clear() {
-    this.session = undefined;
-    this.locale.setupLocale();
+    await this.session.session.store.clear();
+    await this.locale.setupLocale();
   }
 }
