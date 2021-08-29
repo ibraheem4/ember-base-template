@@ -11,7 +11,7 @@ export default class ApplicationController extends Controller {
   @service darkMode;
   @service constants;
 
-  @tracked isMobileMenuExpanded = false;
+  @tracked isMobileMenuExpanded = true;
 
   @action
   async toggleMobileMenuExpanded() {
