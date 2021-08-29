@@ -31,7 +31,7 @@ export default class CurrentUserService extends Service {
   async fetch() {
     try {
       await this.load()
-        .then((user) => {
+        .then(async (user) => {
           this.darkMode.setDarkMode(user.darkMode);
         })
         .catch((error) => {

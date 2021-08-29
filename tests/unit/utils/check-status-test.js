@@ -11,7 +11,7 @@ module('Unit | Utility | check-status', function () {
     };
 
     await checkStatus(response)
-      .then((data) => {
+      .then(async (data) => {
         assert.deepEqual(
           data,
           response,
@@ -35,7 +35,7 @@ module('Unit | Utility | check-status', function () {
     };
 
     await checkStatus(response)
-      .then((data) => {
+      .then(async (data) => {
         assert.notOk(data, 'it should not resolve if status code is invalid');
       })
       .catch((error) => {

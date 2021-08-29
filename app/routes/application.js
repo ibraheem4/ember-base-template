@@ -14,7 +14,7 @@ export default class ApplicationRoute extends Route {
   async loadCurrentUser() {
     return await this.currentUser
       .load()
-      .then((user) => {
+      .then(async (user) => {
         this.darkMode.setDarkMode(user.darkMode);
       })
       .catch((error) => {
