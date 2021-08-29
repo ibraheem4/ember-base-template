@@ -1,5 +1,5 @@
 {{page-title (t "project_name")}}
-{{#if this.isDarkModeEnabled}}
+{{#if this.darkMode.enabled}}
   {{set-body-class "flex flex-col min-h-screen dark"}}
 {{else}}
   {{set-body-class "flex flex-col min-h-screen"}}
@@ -21,12 +21,12 @@
         data-test-dark-mode-button
         class="inline-flex items-center justify-center w-10 h-10 py-1 text-gray-500 rounded-md md:mr-2 dark:hover:text-gray-200 hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600"
         aria-label={{t "light_dark"}}
-        {{on "click" this.toggleDarkMode}}
+        {{on "click" this.darkMode.toggleDarkMode}}
       >
         <span class="sr-only">
-          {{if this.isDarkModeEnabled (t "light_mode") (t "dark_mode")}}
+          {{if this.darkMode.enabled (t "light_mode") (t "dark_mode")}}
         </span>
-        {{#if this.isDarkModeEnabled}}
+        {{#if this.darkMode.enabled}}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -38,7 +38,7 @@
             stroke-linecap="round"
             stroke-linejoin="round"
           >
-            <path d={{this.ICON_MOON}}></path>
+            <path d={{this.constants.ICON_MOON}}></path>
           </svg>
         {{else}}
           <svg
@@ -107,8 +107,8 @@
                 stroke-width="2"
                 d={{if
                   this.isMobileMenuExpanded
-                  this.ICON_X
-                  this.ICON_HAMBURGER
+                  this.constants.ICON_X
+                  this.constants.ICON_HAMBURGER
                 }}
               ></path>
             </svg>
