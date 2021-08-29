@@ -2,75 +2,8 @@
 <div class="flex flex-col sm:px-6 lg:px-8">
   <div class="sm:mx-auto sm:w-full sm:max-w-md">
     <div class="p-6 border rounded-lg shadow sm:px-10 dark:border-gray-700">
-      <form data-test-form="signup-form" {{on "submit" this.signup}}>
-        <div class="mb-6 space-y-4">
-          <div>
-            <label
-              for="email"
-              class="block mb-4 font-medium text-gray-700 text-md dark:text-gray-500"
-            >
-              {{t "email"}}
-            </label>
-            <Input
-              required="true"
-              id="email"
-              placeholder={{t "enter_email"}}
-              autocomplete="username"
-              @value={{this.email}}
-              data-test-input="email"
-              class="block w-full px-3 py-2 placeholder-gray-600 border border-gray-300 rounded-md shadow-sm appearance-none dark:border-gray-700 sm:text-sm dark:bg-black dark:text-gray-500"
-              @type="email"
-            />
-          </div>
-          <div>
-            <label
-              for="new-password"
-              class="block mb-4 font-medium text-gray-700 text-md dark:text-gray-500"
-            >
-              {{t "password"}}
-            </label>
-            <Input
-              required="true"
-              id="new-password"
-              placeholder={{t "enter_new_password"}}
-              @type="password"
-              autocomplete="new-password"
-              @value={{this.password}}
-              data-test-input="password"
-              class="block w-full px-3 py-2 mb-4 placeholder-gray-600 border border-gray-300 rounded-md shadow-sm appearance-none dark:border-gray-700 sm:text-sm dark:bg-black dark:text-gray-500"
-            />
-            <label
-              for="password-confirmation"
-              class="block mt-2 mb-4 font-medium text-gray-700 text-md dark:text-gray-500"
-            >
-              {{t "password_confirmation"}}
-            </label>
-            <Input
-              required="true"
-              id="password-confirmation"
-              placeholder={{t "confirm_password"}}
-              @type="password"
-              autocomplete="new-password"
-              @value={{this.passwordConfirmation}}
-              data-test-input="password-confirmation"
-              class="block w-full px-3 py-2 placeholder-gray-600 border border-gray-300 rounded-md shadow-sm appearance-none dark:border-gray-700 sm:text-sm dark:bg-black dark:text-gray-500"
-            />
-          </div>
-        </div>
-        <button
-          type="button"
-          data-test-action="signup"
-          class="flex justify-center w-full px-4 py-2 mb-1 font-medium text-gray-700 border-2 border-gray-300 rounded-md shadow-sm text-md dark:bg-indigo-900 dark:border-gray-700 hover:bg-gray-100 dark:text-gray-500 dark:hover:text-gray-200 dark:hover:bg-indigo-700 disabled:opacity-60"
-          {{on "click" this.signup}}
-        >
-          {{t "sign_up"}}
-        </button>
-        {{#if this.errorMessage}}
-          <div role="alert" class="text-gray-600">
-            {{this.errorMessage}}
-          </div>
-        {{/if}}
-      </form>
+      <Signup::SignupForm />
+
     </div>
   </div>
 </div>
