@@ -7,8 +7,7 @@ export default class DarkModeService extends Service {
   @service session;
   @service constants;
 
-  @tracked enabled =
-    this.session.data.darkMode || this.constants.DEFAULT_DARK_MODE;
+  @tracked enabled;
 
   @action
   toggleDarkMode() {
@@ -19,6 +18,6 @@ export default class DarkModeService extends Service {
 
   @action
   setDarkMode(value) {
-    this.session.data.darkMode = value;
+    this.enabled = value;
   }
 }
