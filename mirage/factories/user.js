@@ -7,5 +7,4 @@ export default Factory.extend({
   username: faker.internet.userName,
   firstName: faker.name.firstName,
   lastName: faker.name.lastName,
-  darkMode: faker.datatype.boolean,
 });

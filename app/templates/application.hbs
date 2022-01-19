@@ -1,9 +1,5 @@
 {{page-title (t "project_name")}}
-{{#if this.darkMode.enabled}}
-  {{set-body-class "flex flex-col min-h-screen dark"}}
-{{else}}
-  {{set-body-class "flex flex-col min-h-screen"}}
-{{/if}}
+{{set-body-class "flex flex-col min-h-screen"}}
 <header class="dark:bg-black">
   <div class="mx-4 mt-1">
     <div class="flex justify-between">
@@ -16,54 +12,6 @@
           {{t "project_name"}}
         </LinkTo>
       </h1>
-      <button
-        type="button"
-        data-test-dark-mode-button
-        class="inline-flex items-center justify-center w-10 h-10 py-1 text-gray-500 rounded-md md:mr-2 dark:hover:text-gray-200 hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600"
-        aria-label={{t "light_dark"}}
-        {{on "click" this.darkMode.toggleDarkMode}}
-      >
-        <span class="sr-only">
-          {{if this.darkMode.enabled (t "light_mode") (t "dark_mode")}}
-        </span>
-        {{#if this.darkMode.enabled}}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d={{this.constants.ICON_MOON}}></path>
-          </svg>
-        {{else}}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-        {{/if}}
-      </button>
     </div>
     <nav
       data-test-navigation="main"

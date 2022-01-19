@@ -3,7 +3,6 @@ import { inject as service } from '@ember/service';
 
 export default class ApplicationRoute extends Route {
   @service currentUser;
-  @service darkMode;
 
   async beforeModel() {
     super.beforeModel(...arguments);
@@ -12,13 +11,8 @@ export default class ApplicationRoute extends Route {
   }
 
   async loadCurrentUser() {
-    return await this.currentUser
-      .load()
-      .then(async (user) => {
-        this.darkMode.setDarkMode(user.darkMode);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    return await this.currentUser.load().catch((error) => {
+      console.log(error);
+    });
   }
 }

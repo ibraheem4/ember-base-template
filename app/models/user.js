@@ -6,5 +6,4 @@ export default class UserModel extends Model {
   @attr('string') username;
   @attr('string') firstName;
   @attr('string') lastName;
-  @attr('boolean') darkMode;
 }
