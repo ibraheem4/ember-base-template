@@ -12,7 +12,7 @@ module('Acceptance | user/profile', function (hooks) {
   test('visiting /user/profile redirects to /login if user is not logged in', async function (assert) {
     await visit('/user/profile');
 
-    assert.equal(currentURL(), '/login', 'redirects to /login');
+    assert.deepEqual(currentURL(), '/login', 'redirects to /login');
   });
 
   test('visiting /user/profile if user is logged in', async function (assert) {
@@ -31,7 +31,7 @@ module('Acceptance | user/profile', function (hooks) {
       'session data is set'
     );
 
-    assert.equal(
+    assert.deepEqual(
       currentURL(),
       '/user/profile',
       'user is redirected to index after login'

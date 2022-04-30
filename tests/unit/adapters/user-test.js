@@ -16,7 +16,7 @@ module('Unit | Adapter | user', function (hooks) {
     const query = { me: true },
       url = adapter.urlForQueryRecord(query);
 
-    assert.equal(
+    assert.deepEqual(
       url,
       `${ENV.APP.API_HOST}/${ENV.APP.API_NAMESPACE}/me/`,
       'current user service url is returned'
@@ -28,7 +28,7 @@ module('Unit | Adapter | user', function (hooks) {
     const query = {},
       url = adapter.urlForQueryRecord(query);
 
-    assert.equal(
+    assert.deepEqual(
       url,
       `${ENV.APP.API_HOST}/${ENV.APP.API_NAMESPACE}`,
       'original url is returned'

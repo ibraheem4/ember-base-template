@@ -12,7 +12,7 @@ module('Acceptance | login', function (hooks) {
   test('visiting /login', async function (assert) {
     await visit('/login');
 
-    assert.equal(currentURL(), '/login', '/login route is reached');
+    assert.deepEqual(currentURL(), '/login', '/login route is reached');
   });
 
   test('user can login via email and logout', async function (assert) {
@@ -30,13 +30,21 @@ module('Acceptance | login', function (hooks) {
       AUTH.loginRequestTokenObject,
       'session data is set'
     );
-    assert.equal(currentURL(), '/', 'user is redirected to index after login');
+    assert.deepEqual(
+      currentURL(),
+      '/',
+      'user is redirected to index after login'
+    );
 
     await click('[data-test-action="logout"]');
 
     sessionData = currentSession().get('data.authenticated');
 
     assert.deepEqual(sessionData, {}, 'session data is unset after logout');
-    assert.equal(currentURL(), '/', 'user is redirected to index after logout');
+    assert.deepEqual(
+      currentURL(),
+      '/',
+      'user is redirected to index after logout'
+    );
   });
 });

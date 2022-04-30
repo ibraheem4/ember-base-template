@@ -9,7 +9,7 @@ module('Integration | Component | site/logout-button', function (hooks) {
   test('it renders', async function (assert) {
     await render(hbs`<Site::LogoutButton />`);
 
-    assert.equal(
+    assert.deepEqual(
       this.element.textContent.trim(),
       'Logout',
       'the logout button shows the correct text'

@@ -18,7 +18,7 @@ module('Unit | Service | current-user', function (hooks) {
 
     await currentUser.load();
 
-    assert.equal(
+    assert.deepEqual(
       currentUser.user,
       AUTH.currentUserAPIObject,
       'current user is loaded'
@@ -33,6 +33,6 @@ module('Unit | Service | current-user', function (hooks) {
 
     await currentUser.load();
 
-    assert.equal(currentUser.user, undefined, 'current user is not loaded');
+    assert.deepEqual(currentUser.user, undefined, 'current user is not loaded');
   });
 });

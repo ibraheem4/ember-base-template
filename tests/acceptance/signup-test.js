@@ -11,12 +11,12 @@ module('Acceptance | signup', function (hooks) {
   test('visiting /signup', async function (assert) {
     await visit('/signup');
 
-    assert.equal(currentURL(), '/signup', '/signup route is reached');
+    assert.deepEqual(currentURL(), '/signup', '/signup route is reached');
   });
 
   test('user can signup with email and password', async function (assert) {
     await visit('/signup');
-    assert.equal(currentURL(), '/signup', '/signup route is reached');
+    assert.deepEqual(currentURL(), '/signup', '/signup route is reached');
 
     await fillIn(
       '[data-test-input="email"]',
@@ -32,12 +32,16 @@ module('Acceptance | signup', function (hooks) {
     );
     await click('[data-test-action="signup"]');
 
-    assert.equal(currentURL(), '/', 'user is redirected to index after signup');
+    assert.deepEqual(
+      currentURL(),
+      '/',
+      'user is redirected to index after signup'
+    );
   });
 
   skip('user is unable to signup if passwords do not match', async function (assert) {
     await visit('/signup');
-    assert.equal(currentURL(), '/signup', '/signup route is reached');
+    assert.deepEqual(currentURL(), '/signup', '/signup route is reached');
 
     await fillIn(
       '[data-test-input="email"]',
@@ -53,15 +57,15 @@ module('Acceptance | signup', function (hooks) {
     );
     await click('[data-test-action="signup"]');
 
-    assert.equal(currentURL(), '/signup', 'user remains on signup page');
+    assert.deepEqual(currentURL(), '/signup', 'user remains on signup page');
   });
 
   skip('submitting empty form does not authenticate', async function (assert) {
     await visit('/signup');
-    assert.equal(currentURL(), '/signup', '/signup route is reached');
+    assert.deepEqual(currentURL(), '/signup', '/signup route is reached');
 
     await click('[data-test-action="signup"]');
 
-    assert.equal(currentURL(), '/signup', 'user remains on signup page');
+    assert.deepEqual(currentURL(), '/signup', 'user remains on signup page');
   });
 });

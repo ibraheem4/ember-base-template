@@ -7,7 +7,7 @@ module('Unit | Adapter | application', function (hooks) {
 
   test('host should be ENV.APP.API_HOST', async function (assert) {
     let adapter = this.owner.lookup('adapter:application');
-    assert.equal(
+    assert.deepEqual(
       adapter.host,
       ENV.APP.API_HOST,
       'host is equal to ENV.APP.API_HOST'
@@ -16,7 +16,7 @@ module('Unit | Adapter | application', function (hooks) {
 
   test('namespace should be ENV.APP.API_NAMESPACE', async function (assert) {
     let adapter = this.owner.lookup('adapter:application');
-    assert.equal(
+    assert.deepEqual(
       adapter.namespace,
       ENV.APP.API_NAMESPACE,
       'namespace is equal to ENV.APP.API_NAMESPACE'
@@ -43,7 +43,7 @@ module('Unit | Adapter | application', function (hooks) {
       data: { authenticated: { access_token } },
     });
 
-    assert.equal(
+    assert.deepEqual(
       adapter.headers.Authorization,
       `Bearer ${access_token}`,
       'access_token is passed into Authorization header'

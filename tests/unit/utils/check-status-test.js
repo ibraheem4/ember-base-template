@@ -39,7 +39,7 @@ module('Unit | Utility | check-status', function () {
         assert.notOk(data, 'it should not resolve if status code is invalid');
       })
       .catch((error) => {
-        assert.equal(
+        assert.deepEqual(
           error,
           response,
           'it rejects the response if status code is invalid'
