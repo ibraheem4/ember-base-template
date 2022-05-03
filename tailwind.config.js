@@ -1,5 +1,9 @@
 module.exports = {
-  purge: [],
+  content: [
+    './app/index.html',
+    './app/components/**/*.hbs',
+    './app/templates/**/*.hbs',
+  ],
   theme: {
     colors: {
       transparent: 'transparent',
@@ -131,16 +135,6 @@ module.exports = {
     },
     extend: {},
   },
-  variants: {
-    float: ['responsive', 'direction'],
-    margin: ['responsive', 'direction'],
-    padding: ['responsive', 'direction'],
-    space: ['responsive', 'direction'],
-    textAlign: ['responsive', 'direction'],
-    fontSize: ['responsive', 'direction'],
-    opacity: ['disabled'],
-  },
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   plugins: [require('tailwindcss-dir')()],
-  darkMode: 'media',
 };
