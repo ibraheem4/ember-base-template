@@ -8,7 +8,6 @@ import { action } from '@ember/object';
 export default class LocaleService extends Service {
   @service session;
   @service intl;
-  @service constants;
 
   @tracked directionValue = undefined;
   @tracked isRtl = undefined;
@@ -21,7 +20,7 @@ export default class LocaleService extends Service {
     const selectedLocale = this.session.data.locale;
 
     if (selectedLocale) {
-      const directionValue = this.constants.RTL_LANGUAGES.includes(
+      const directionValue = Object.freeze(['ar']).includes(
         selectedLocale.toLowerCase()
       )
         ? 'rtl'
@@ -41,7 +40,7 @@ export default class LocaleService extends Service {
     } else if (loadedUser && loadedUser.language) {
       const userProfileLocale = loadedUser.language;
 
-      const directionValue = this.constants.RTL_LANGUAGES.includes(
+      const directionValue = Object.freeze(['ar']).includes(
         userProfileLocale.toLowerCase()
       )
         ? 'rtl'
@@ -61,10 +60,10 @@ export default class LocaleService extends Service {
     } else {
       const calculatedLocale = calculateLocale(
         this.intl.locales,
-        this.constants.DEFAULT_LOCALE
+        Object.freeze('en-us')
       );
 
-      const directionValue = this.constants.RTL_LANGUAGES.includes(
+      const directionValue = Object.freeze(['ar']).includes(
         calculatedLocale.toLowerCase()
       )
         ? 'rtl'
@@ -93,7 +92,7 @@ export default class LocaleService extends Service {
 
   @action
   async changeLocale(locale) {
-    const directionValue = this.constants.RTL_LANGUAGES.includes(
+    const directionValue = Object.freeze(['ar']).includes(
       locale.languageCode.toLowerCase()
     )
       ? 'rtl'

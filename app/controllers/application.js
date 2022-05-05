@@ -8,7 +8,6 @@ export default class ApplicationController extends Controller {
   @service session;
   @service intl;
   @service locale;
-  @service constants;
 
   @tracked isMobileMenuExpanded = true;
 

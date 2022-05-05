@@ -6,7 +6,6 @@ export default class CurrentUserService extends Service {
   @service session;
   @service store;
   @service locale;
-  @service constants;
 
   @tracked user = undefined;
   @tracked errorMessage = undefined;

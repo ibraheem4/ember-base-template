@@ -4,7 +4,6 @@ import { task } from 'ember-concurrency';
 
 export default class UserProfileFormComponent extends Component {
   @service currentUser;
-  @service constants;
 
   @task(function* () {
     yield this.currentUser.user.save();

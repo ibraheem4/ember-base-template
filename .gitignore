@@ -25,6 +25,7 @@
 # ember-try
 /.node_modules.ember-try/
 /bower.json.ember-try
+/npm-shrinkwrap.json.ember-try
 /package.json.ember-try
 
 *.DS_Store
@@ -32,3 +33,5 @@
 # Husky
 .husky/_
 .husky/.gitignore
+/package-lock.json.ember-try
+/yarn.lock.ember-try
