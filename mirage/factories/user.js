@@ -1,10 +1,12 @@
 import { Factory } from 'ember-cli-mirage';
-import faker from 'faker';
+import { randUser } from '@ngneat/falso';
+
+const user = randUser();
 
 export default Factory.extend({
-  email: faker.internet.email,
+  email: user.email,
   language: 'en-us',
-  username: faker.internet.userName,
-  firstName: faker.name.firstName,
-  lastName: faker.name.lastName,
+  username: user.username,
+  firstName: user.firstName,
+  lastName: user.lastName,
 });
